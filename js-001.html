@@ -7,28 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>file: js-001.html</title>
 
-  <script>
-    'use strict';
-
-    // variabel
-    var budskabet = 'Mojn!';
-
-    // dato
-    // liste
-    // loop
-    // Åbningstider - øvelse
-
-    function typeIt() {
-      let tekst = document.getElementById('theText');
-      tekst.innerHTML = budskabet;
-      tekst.style = 'color:green;font-size:7rem;font-family:arial';
-      console.log('ja, funktionen typeIt loades ....');
-    }
-
-    // fire off the function when the window is loaded
-    window.addEventListener('load', typeIt);
-  </script>
-
 </head>
 
 <body>
@@ -39,67 +17,108 @@
     <div id="theText"></div>
   </article>
 
+  <!-- noget -->
+
   <script>
     /**
-     * fil: navn
+     * fil: js-001.html
      * formål: jeg vil lære JavaScript
      * dato: 2018-08-24
      **/
 
-    // Variabler
-    var kat = '<p id="minKat">Garfield\'s</p>'; // streng, string
-    kat = 23; // tal
-    var boo = true; // boolean
+    // variable: husk at 'xxx'
+    var bil = 'Hej verden: "vil jeg lige sige"';
+    var mad = "ostemad";
+    var mitHtml = "<h1 id=\"minId\">";
 
-    var en = 123456;
-    var to = 2789;
-    var sum = en * to;
+    console.log( 'mitHtml variablen indeholder: ' + mitHtml );
 
-    // beregn en BMI
-    var person = 'Donald Duck';
-    var hoejde = 140;
-    var vaegt = 70;
+    // data typer
+    var tal = 21;
+    var andetTal = 22/7;
+    var regne = 2*(19+45/(3*5));
 
-    var bmi = vaegt / (hoejde * hoejde);
+    // logik: sand eller falsk
+    var loegn = true; // booleans
+    var sandhed = false;
+    var passerDet = 4 > 72;
+    passerDet = tal > 0;
 
-    console.log('Hej verden!');
-    console.log( bmi );
+    // "21" !=== 21
+    var et = 21;
+    var to = "21";
+    var sum = et + to;
 
-    var soldat = 'Tinsoldaten';
-    var kaelling = 'heks';
-    var indledning = 'Der var engang';
-    console.log(indledning + ' ' + ' ' + soldat + ' ' + kaelling);
+    // html streng
+    var h1 = '<h1 class="red">'
+    var teksten = 'Lorem ipsum';
+    var tekst2 = 'og sådan noget';
+    var h1x = '</h1>';
+    var samletTekst = h1 + teksten + ' ' + tekst2 + h1x;
 
-    // tinsoldaten har en BMI på XX
-    console.log( soldat + ' har en BMI på: ' + bmi );
+    // skriv til en tag
+    var enId = document.getElementById("theText");
+    enId.innerHTML = samletTekst;
+    enId.innerHTML += samletTekst;
+    enId.innerHTML += '<p>Åh nej</p>';
 
-    //var navn = prompt('Hvad hedder du?');
-    //document.write( 'Hej ' + navn);
-
-    // liste, array
+    // listerne (array)
     var husk = [
       'abe',
-      'kat',
-      'mælk',
-      23
-    ];
+      'kuglepen',
+      'whiskey',
+      'lommeuld',
+      'kanon'
+    ]
 
-    // loops, for (andre former: while, for in ...)
-    // n++ => n=n+1
-    /*
-    for (var n = 0; n <= 10000; n++) {
-      console.log( 'Nu er n = ' + n );
+    console.log(husk);
+
+    // loop
+    for ( var andersAnd = 1; andersAnd <= 99; andersAnd++ ){
+      console.log(andersAnd);
     }
-    */
 
-    // nu fra en liste
-    console.log( husk[3] );
+    // et element fra listen
+    husk[0];
 
-    // hele listen
-    for (var n = 0; n < husk.length ; n++) {
-      console.log( husk[n] );
-      document.write( '<p>' + husk[n] + '</p>');
-    }
+    // prompt
+    var navn = prompt('Hva hejjer do lissom?');
+    console.log('Do hejjer: ' + navn);
+
+    // BMI BEREGNER?
+
+    // Navn? fx var navn = prompt()
+    // Højde?
+    // Vægt
+    // Beregn BMI =
+    // send BMI til konsollen
+
+    // avanceret: skriv tal og beregninger i DOM
+    // via document.getElementById("ID");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,74 +129,6 @@
 
 
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
