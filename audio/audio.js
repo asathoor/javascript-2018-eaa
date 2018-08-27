@@ -1,6 +1,8 @@
 /**
  * file: audio.js
  **/
+
+// sample track list
 let myTracks = [
   'workoutmix.mp3',
   'yoursample.mp3',

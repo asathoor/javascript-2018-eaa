@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>100 Cute Tuxes</title>
 </head>
+
 <body>
   <h1>100 Cute Tuxes</h1>
+
   <div id="theGallery"></div>
+
   <script>
     'use strict';
     /**
@@ -17,23 +21,25 @@
      **/
 
     // a function should return some value
-    function randomSize(){
+    function randomSize() {
       let n = Math.random(); // tilfældigt tal
-      return Math.floor((n * 182))+23; // + 12 => mindst 12
+      return Math.floor((n * 182)) + 23; // + 12 => mindst 12
     }
 
     // images from wikimedia commons
     let anImage;
 
-    for (let x = 1; x <= 100; x++){
-        anImage = document.createElement('img'); // use this to create any tag
-        anImage.src = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Crystal_128_penguin.png';
-        anImage.alt = 'Tux no. ' + x;
-        anImage.style = 'height:'
-          + randomSize()
-          + 'px;width:auto;';
-        theGallery.appendChild(anImage); // append your tag to an id
+    for (let x = 1; x <= 100; x++) {
+      anImage = document.createElement('img'); // use this to create any tag
+      anImage.src = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Crystal_128_penguin.png';
+      anImage.alt = 'Tux no. ' + x;
+      anImage.style = 'height:' +
+        randomSize() +
+        'px;width:auto;';
+      // anImage.classList.add("mystyle"); // add a class
+      theGallery.appendChild(anImage); // append your tag to an id
     }
   </script>
 </body>
+
 </html>
