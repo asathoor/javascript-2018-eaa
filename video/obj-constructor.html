@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Object constructor</title>
+</head>
+<body>
+  <script>
+  /**
+   * How to create an object constructor
+   **/
+
+    // object
+    let MyObject = function(yogi,age,style){
+      this.yogi = yogi;
+      this.age = age;
+      this.style = style;
+    }
+
+    // instance
+    let instanceOfObject = new MyObject(
+      'Anoushka Shankar',
+      '39',
+      'Hatha Yoga');
+  </script>
+</body>
+</html>
