@@ -7,19 +7,26 @@
 // @url: https://www.w3schools.com/js/js_date_methods.asp
 let dagsDato = new Date();
 let dag = dagsDato.getDay();
+let dag.getMonth();
 
 console.log(dag);
 
 // en liste
 let ugeDage = [
   'søndag',
-  'mandag',
+  '<img src="x.jpg">',
   'tirsdag',
   'onsdag',
   'torsdag',
   'fredag',
   'lørdag'
 ]; // liste
+
+/*
+if ( dag === 1){
+  var billede = '<img src="y.jpg">';
+}
+*/
 
 // vis hvilken dag det er i dag
 console.log(ugeDage[dag]);
