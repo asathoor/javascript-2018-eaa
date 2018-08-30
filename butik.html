@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="test"></div>
+  <script>
+  var today = new Date();
+  var hourNow = today.getHours();
+  var greeting;
+
+  // ide ...
+  var besked = document.getElementById('test');
+  besked.innerHTML = '<img src="images/x.gif">';
+
+  // og her ...?
+  if (hourNow > 18) {
+      greeting = '<img src="images/mitB.png" alt="noget">';
+  } else if (hourNow > 12) {
+      greeting = '<img src="images/mitB.png" alt="noget">';
+  } else if (hourNow > 0) {
+      greeting = '<img src="images/mitB.png" alt="noget">';
+  } else {
+      greeting = '<img src="images/mitB.png" alt="noget">';
+  }
+
+  //document.write('<h3>' + greeting + '</h3>');
+  // dato
+  // @url: https://www.w3schools.com/js/js_date_methods.asp
+  let dagsDato = new Date();
+  let dag = dagsDato.getDay();
+  let maaned = dagsDato.getMonth();
+
+  console.log(maaned);
+
+  let aar = [
+    'jan','jan','jan','jan','jan','jan','jan','aug'
+  ]
+
+  console.log(aar[maaned]);
+  </script>
+</body>
+</html>
