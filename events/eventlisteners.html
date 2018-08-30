@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>eventlistener-pass-argument.html</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #006600;
+    }
+
+    #clickMe {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      background: blue;
+      color: #fff;
+    }
+
+    #container {
+      color: #000;
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: yellow;
+    }
+
+    #animate {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: red;
+    }
+
+    #sizer {
+      position: relative;
+      height: 100px;
+      width: 150px;
+      background: blue;
+      padding: 5px;
+      margin-top: 25px;
+      overflow: auto;
+      border: 1px solid black;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>eventListeners</h1>
+
+  <div id="clickMe">Click Me!</div>
+
+  <div id="container">
+    Simple animation
+    <div id="animate"></div>
+  </div>
+
+  <div id="sizer">
+    <h2>Scroll Me!</h2>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deserunt assumenda similique quas ullam reprehenderit ad iusto. Illo quae reiciendis nihil neque enim modi, molestiae. Aspernatur eveniet, qui nam sint.</div>
+    <div>At eum sit, modi ea. Illum dolores quos, tempore aliquam sed aspernatur excepturi non aliquid, explicabo ex ipsam cupiditate officiis ullam consequuntur adipisci in odit possimus recusandae, enim commodi dolor!</div>
+    <div>Repellendus placeat quos illum minima fugiat praesentium sequi reiciendis, alias quis quod libero, vero! Itaque perspiciatis quia modi facere eos nam delectus nesciunt voluptate eum, unde consectetur ea, quos debitis.</div>
+    <div>Vero libero totam quis odit similique officia delectus recusandae officiis ipsum, magni cupiditate eligendi praesentium pariatur aspernatur alias fugiat, a ea sed omnis ratione dolore accusamus magnam velit. Deleniti, repellat!</div>
+    <div>Itaque dolorum, adipisci doloremque quas expedita fugit minima sint velit quidem aliquid commodi fugiat harum tenetur nostrum facere iusto ratione voluptate temporibus inventore animi officia, asperiores consequuntur incidunt. Culpa, inventore.</div>
+    <div>Officia tempora totam deserunt, quo dignissimos aliquam facilis, adipisci omnis corporis temporibus vitae. Illum et ut, a similique natus accusamus, placeat, perspiciatis ipsa quos asperiores laborum sunt quia beatae dolores!</div>
+    <div>Maiores, ratione esse vitae magnam porro nisi! Sapiente culpa expedita nisi distinctio corrupti necessitatibus mollitia alias est, quae impedit, earum voluptates enim? Doloribus, nihil iste, voluptas officia sed molestiae consequatur.</div>
+    <div>Ducimus mollitia, neque soluta asperiores placeat perspiciatis doloribus harum ex debitis modi, voluptate nihil. Facere nesciunt nisi assumenda aut voluptas cum ipsa nostrum modi, nulla omnis obcaecati, numquam placeat, autem!</div>
+    <div>Et, molestiae a ea, unde tempora quas veritatis, minima ullam recusandae distinctio cum ratione nemo facilis adipisci dolore. Quod quaerat, sit odit repellendus fugiat velit officiis repudiandae soluta similique esse.</div>
+    <div>Laborum tempore earum distinctio quibusdam rerum dolorum dolore optio vitae expedita eos exercitationem beatae consequatur molestiae, est pariatur excepturi nihil modi. Culpa facere libero optio quod unde, assumenda debitis facilis.</div>
+    <div>Assumenda cumque, magnam aspernatur nostrum sequi illum, eum sit ipsum perspiciatis in expedita at odio quo reiciendis natus veniam, minima ducimus quidem architecto facere quasi. Veniam eius ipsum fugiat architecto.</div>
+    <div>Eos sapiente culpa facilis, esse, provident maxime expedita animi consequuntur repellendus in excepturi aliquam, atque ipsa. Hic, quam obcaecati fugit pariatur incidunt cum praesentium aliquid provident voluptas, officia quo impedit.</div>
+    <div>Itaque fuga porro debitis commodi consequatur quod minima asperiores excepturi ut quos esse, explicabo aspernatur obcaecati dolore aut recusandae reiciendis eveniet officiis quisquam iure voluptas est in facilis. Unde, dicta!</div>
+    <div>Nobis accusamus harum ea, recusandae consectetur eius nisi quisquam laborum expedita quis voluptate nostrum accusantium voluptatum excepturi quia neque non eaque mollitia voluptatibus facilis libero optio deleniti. Voluptatum, esse, eaque!</div>
+  </div>
+
+  <script>
+    let move = 35;
+
+    // move simple
+    clickMe.addEventListener('click', function() {
+      clickMe.style.left = move;
+      move += 35;
+    });
+
+    // scroll
+    sizer.addEventListener("scroll", function() {
+      sizer.style.background = 'white';
+      sizer.style.width = '389px';
+    });
+
+    // animation
+    // @url: https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_animate_3
+    function myMove() {
+      var elem = document.getElementById("animate"); // to be animated
+      var pos = 0; // i.e. top left corner 0,0
+      var id = setInterval(frame, 5); // initiate a timer
+
+      function frame() {
+        if (pos == 350) {
+          // pos 350,350 is the bottom right corner
+          // in #container
+          clearInterval(id); // stop the timer
+        } else {
+          pos++;
+          elem.style.top = pos + 'px'; // add styles
+          elem.style.left = pos + 'px';
+        }
+      }
+    }
+
+    // on DOM load function
+    window.addEventListener('load', myMove);
+  </script>
+</body>
+
+</html>
