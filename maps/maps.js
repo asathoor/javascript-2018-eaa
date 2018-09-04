@@ -6,7 +6,6 @@
 // get the token from Mapbox Studio
  mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
 
-
 /*
 container = the id holding your map
 style = uri to the style from Mapbox Studio
