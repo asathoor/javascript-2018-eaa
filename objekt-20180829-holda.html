@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Objekter i JavaScript</title>
+</head>
+<body>
+  <!-- herunder indsættes indhold fra js -->
+  <div id="tekst"></div>
+  <ol id="rygsaek"></ol>
+  <script>
+    /**
+     * Objekter ...
+     **/
+     let hobbit = {
+       navn: 'Bilbo Baggins',
+       rolle: 'tyv',
+       adresse: 'Shire',
+       intelligens: 15,
+       hitpoints: 13,
+       ting: [
+        'Stik',
+       'ring (the One Ring to Bind them all...)',
+       'ringbrynje',
+       'tobak',
+       'lembas',
+       'flaske',
+       'mere og mere .. '],
+       metode: function() {
+         console.log('Jeg er lissom en metode fra hobbit');
+       }
+     }
+
+    tekst.innerHTML = hobbit.navn;
+    console.log(hobbit.ting);
+
+    // for loop
+    for (let a = 0;a<hobbit.ting.length;a++){
+      console.log(a);
+      rygsaek.innerHTML += '<li>' + hobbit.ting[a] + '</li>';
+    }
+
+    // for in loop
+    for (x in hobbit.ting){
+      console.log(x);
+      rygsaek.innerHTML += '<li>' + hobbit.ting[x] + '</li>';
+    }
+
+    hobbit.metode();
+
+    let Orker = function(navn,smuk,alder){
+      this.navn = navn;
+      this.smuk = smuk;
+      this.alder = alder;
+    }
+
+    let palle = new Orker('Palle',false,234);
+    let margrethe = new Orker('Margrethe',true,777);
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
