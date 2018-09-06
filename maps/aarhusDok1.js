@@ -1,6 +1,6 @@
 /**
  * file: aarhusDok1.js
- * purpose: display a map in #map
+ * purpose: 3D buildings, Dok1 area, Aarhus
  **/
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
 
