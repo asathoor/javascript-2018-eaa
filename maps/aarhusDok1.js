@@ -4,7 +4,6 @@
  **/
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
 
-
 const map = new mapboxgl.Map({ // autoexecute function
   container: 'map',
   style: 'mapbox://styles/asathoor/cjfkvmngz9bz52rpdgbs29r0w',
