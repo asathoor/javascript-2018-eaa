@@ -18,10 +18,16 @@
 
 <body>
 
+
   <video id="myVideo" width="320" height="176" controls>
+
+    <!-- her ligger den video som skiftes ud -->
     <source id="mp4" src="https://www.w3schools.com/tags/mov_bbb.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
+    Get a new browser, please! You cannot see this übercool video.
+
   </video>
+
+  <!-- den røde firkant venter på klik -->
   <div id="clickMe"></div>
   <p>Klik på den røde firkant. Så loader en ny video ...</p>
   <p>Videos from W3-Schools, see <a href="https://www.w3schools.com/Tags/tryit.asp?filename=tryhtml5_av_met_load">this tutorial</a>
@@ -34,21 +40,26 @@
      * ide @url: https://stackoverflow.com/questions/18703519/dynamically-load-and-play-html5-video#18703682
      * og @url: https://www.w3schools.com/Tags/tryit.asp?filename=tryhtml5_av_met_load
      **/
+
+    // navn på videoen
     let vid2 = 'https://www.w3schools.com/Tags/movie.mp4';
 
+    // funktionen loader og afspiller en video
     function loadVideo(id) {
       var video = document.getElementById('myVideo');
       var mp4 = document.getElementById('mp4');
-      d = new Date();
 
       mp4.src = id;
 
-      video.load();
-      video.play();
+      video.load(); // loader videoen
+      video.play(); // afspiller videoen (kan undværes)
     }
 
     clickMe.addEventListener('click', function(){
-      // alert('klik!'); // test
+      /*
+       * Loader en ny video når der klikkes på
+       * den røde firkant.
+       */
       loadVideo(vid2);
     });
   </script>
