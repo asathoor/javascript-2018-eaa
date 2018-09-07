@@ -62,27 +62,24 @@
 
     // scroll-eventlistener
     window.addEventListener("scroll", function() {
-      console.log('scroll ...'); // test
 
       // hvis erJegHer er synlig, så ...
       if (elFllVsbl(erJegHer)) {
-        console.log(elFllVsbl(erJegHer)); // test
 
         if (!(myVideo.curentTime > 0)) {
           myVideo.load(); // load the video
           myVideo.play(); // play audio
         }
       } else {
-        console.log(elFllVsbl(erJegHer)); // test
-        myVideo.pause();
-        myVideo.currentTime = 0; // rewind the sound
+        myVideo.pause(); // pause the video
+        myVideo.currentTime = 0; // rewind the video
       }
 
     })
 
     // funktionen tester om videoen er synlig
-    // og returnerer true eller false
     function elFllVsbl(el) {
+      // og returnerer true eller false  
       return (el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom < window.innerHeight);
     }
   </script>
