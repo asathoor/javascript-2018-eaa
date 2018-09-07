@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #clickMe {
+      position: relative;
+      height: 45px;
+      width: 45px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video id="myVideo" width="320" height="176" controls>
+    <source id="mp4" src="https://www.w3schools.com/tags/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div id="clickMe"></div>
+  <p>Klik på den røde firkant. Så loader en ny video ...</p>
+  <p>Videos from W3-Schools, see <a href="https://www.w3schools.com/Tags/tryit.asp?filename=tryhtml5_av_met_load">this tutorial</a>
+  <source></p>
+
+  <script>
+    /**
+     * file: loadVideo.html
+     * purpose: load and refresh a video
+     * ide @url: https://stackoverflow.com/questions/18703519/dynamically-load-and-play-html5-video#18703682
+     * og @url: https://www.w3schools.com/Tags/tryit.asp?filename=tryhtml5_av_met_load
+     **/
+    let vid2 = 'https://www.w3schools.com/Tags/movie.mp4';
+
+    function loadVideo(id) {
+      var video = document.getElementById('myVideo');
+      var mp4 = document.getElementById('mp4');
+      d = new Date();
+
+      mp4.src = id;
+
+      video.load();
+      video.play();
+    }
+
+    clickMe.addEventListener('click', function(){
+      // alert('klik!'); // test
+      loadVideo(vid2);
+    });
+  </script>
+
+</body>
+
+</html>
