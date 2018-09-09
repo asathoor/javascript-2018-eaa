@@ -12,6 +12,7 @@ const map = new mapboxgl.Map({
   bearing: 22
 });
 
+/*
 // The 'building' layer in the mapbox-streets vector source contains building-height
 // data from OpenStreetMap.
 map.on('load', function() {
@@ -52,3 +53,4 @@ map.on('load', function() {
         }
     }, labelLayerId);
 });
+*/
