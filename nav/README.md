@@ -47,7 +47,7 @@ The code above will hide / display the nav tag on mobile devices.
 For rapid development I have added a loop that will fill in placeholder images in the gallery.
 Such a loop is not found in the article.
 This is a more convenient way to test the layout of image galleries.
-A JavaScript is a good friend in rapid prototyping.
+A JavaScript loop is a very good friend in rapid prototyping.
 
 ~~~~
 const myImg = 'https://via.placeholder.com/400x300'; // placeholder image
