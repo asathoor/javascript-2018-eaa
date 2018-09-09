@@ -6,7 +6,7 @@ JavaScript Navigation and CSS Grid
 * Mobile Navigation - hide and show the `<nav>` via JavaScript
 * CSS3 Grid-based layout with fallbacks for browsers that do not support CSS grid.
 
-From the CSS:
+## From the CSS grid
 
 ~~~~
 @supports (display:grid){
@@ -19,7 +19,8 @@ From the CSS:
 }
 ~~~~
 
-The code above will test if grid is supported, if that's the case the CSS rules will fire.
+The `@supports()` code above will test if grid is supported. If that's the case the CSS rules will fire.
+
 
 ## From the JavaScript for the navigation
 
@@ -44,7 +45,9 @@ The code above will hide / display the nav tag on mobile devices.
 ## Addition to the JavaScript
 
 For rapid development I have added a loop that will fill in placeholder images in the gallery.
+Such a loop is not found in the article.
 This is a more convenient way to test the layout of image galleries.
+A JavaScript is a good friend in rapid prototyping.
 
 ~~~~
 const myImg = 'https://via.placeholder.com/400x300'; // placeholder image
