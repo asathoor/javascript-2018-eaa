@@ -11,6 +11,8 @@
 <body>
   <h1>Is my video visible?</h1>
 
+  <p>Scroll, please!</p>
+
   <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia eligendi ipsa nostrum iste labore voluptates illum perferendis. Ducimus obcaecati minus soluta, neque labore? Ullam repellat dolor recusandae unde delectus, ratione!</div>
   <div>Libero ipsam harum officiis eaque voluptas cupiditate modi nam perspiciatis vel amet suscipit quae quo, aspernatur ducimus in corrupti, obcaecati, velit fugit! Ullam officiis iste dolores, recusandae laboriosam doloremque. Qui.</div>
   <div>Pariatur ex, sint provident? Mollitia cumque blanditiis dicta, laudantium nam quo ex eaque quod, omnis obcaecati velit. Expedita repellendus laboriosam optio ab doloribus, aspernatur ipsum quibusdam omnis iusto cumque sunt?</div>
@@ -67,7 +69,7 @@
       if (elFllVsbl(erJegHer)) {
 
         if (!(myVideo.curentTime > 0)) {
-          myVideo.load(); // load the video
+          //myVideo.load(); // load the video
           myVideo.play(); // play audio
         }
       } else {
@@ -75,11 +77,11 @@
         myVideo.currentTime = 0; // rewind the video
       }
 
-    })
+    });
 
     // funktionen tester om videoen er synlig
     function elFllVsbl(el) {
-      // og returnerer true eller false  
+      // og returnerer true eller false
       return (el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom < window.innerHeight);
     }
   </script>
