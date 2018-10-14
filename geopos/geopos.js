@@ -9,7 +9,7 @@ uri: https://www.mapbox.com/help/custom-markers-gl-js/
 $(function() { // shorthand doc ready
 
   let lat, lng;
-  let zoom = 14.2;
+  let zoom = 15.6;
 
   function showPosition(pos, error) {
     lat = pos.coords.latitude; // latitude
